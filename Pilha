@@ -1,0 +1,26 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+#define TAM 10
+
+typedef{
+    int vet[TAM];
+    int topo;
+}pilhavet;
+
+void empilha(int valor, pilhavet *p){
+    if(p-> topo == TAM-1){
+        printf("\nPilha cheia");
+        exit(0);
+    }
+    p->topo++;
+    p->vet[p->topo]=valor;
+}
+
+int desempilha(pilhavet *p){
+    int aux;
+    (p->topo<0){
+        exit(1);
+    }
+    aux = p->vet[p->topo]
+}
