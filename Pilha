@@ -1,8 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-
 #define TAM 10
-
 typedef{
     int vet[TAM];
     int topo;
@@ -11,16 +9,32 @@ typedef{
 void empilha(int valor, pilhavet *p){
     if(p-> topo == TAM-1){
         printf("\nPilha cheia");
-        exit(0);
+        exit(0);   
     }
     p->topo++;
-    p->vet[p->topo]=valor;
+    p->vet[p->topo]-valor;
 }
 
-int desempilha(pilhavet *p){
+int desempilha (pilhavet *p){
     int aux;
-    (p->topo<0){
+    if (p->topo<0) {
+        printf("\nPilha vazia");
         exit(1);
     }
-    aux = p->vet[p->topo]
+    aux =
+    p->vet[p->topo];
+    p->topo--;
+    return aux;
+}
+
+int main(void){
+    pilhavet pilha;
+    int valor;
+    pilha.topo=-1;
+    for (int i=0; i<TAM; i++){
+        printf("\nDigite o valor a ser empilhado: ");
+        scanf("%d", &valor);
+        empilha()
+    }
+    
 }
