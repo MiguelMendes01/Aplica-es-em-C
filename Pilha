@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+
 #define TAM 10
 typedef{
     int vet[TAM];
@@ -34,7 +35,13 @@ int main(void){
     for (int i=0; i<TAM; i++){
         printf("\nDigite o valor a ser empilhado: ");
         scanf("%d", &valor);
-        empilha()
+        empilha(valor,&pilha);
     }
+    for (int i=0; i<TAM; i++){
+        printf("\n%", desempilha(&pilha));
+    }
+    printf("\n");
+    system("pause");
     
 }
+ 
