@@ -1,13 +1,13 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include<stdlib.h>
+#include<stdio.h>
 
 #define TAM 10
-typedef{
+typedef struct{
     int vet[TAM];
     int topo;
 }pilhavet;
 
-void empilha(int valor, pilhavet *p){
+void empilha(int valor,pilhavet*p){
     if(p-> topo == TAM-1){
         printf("\nPilha cheia");
         exit(0);   
@@ -44,4 +44,3 @@ int main(void){
     system("pause");
     
 }
- 
