@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#define TAM 5
+
+typedef struct{
+    int ID;
+    int idd;
+    float ren;
+    char nome[50];
+}cli;
+
+int main(void){
+    cli form[5];
+    for(int i=0; i<5; i++){
+        printf("\n Digite o ID do %dº cliente", i+1);
+        scanf("%d",&form[i].ID);
+        printf("\n Digite a idade do %dº cliente", i+1);
+        scanf("%d",&form[i].idd);
+        printf("\n Digite a renda do %dº cliente", i+1);
+        scanf("%f",&form[i].ren);
+        getchar();
+        printf("\n Digite o nome do %dº cliente", i+1);
+        gets(form[i].nome);
+}
