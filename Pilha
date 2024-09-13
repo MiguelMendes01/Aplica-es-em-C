@@ -1,7 +1,7 @@
 #include<stdlib.h>
 #include<stdio.h>
 
-#define TAM 10
+#define TAM 3
 typedef struct{
     int vet[TAM];
     int topo;
@@ -13,7 +13,7 @@ void empilha(int valor,pilhavet*p){
         exit(0);   
     }
     p->topo++;
-    p->vet[p->topo]-valor;
+    p->vet[p->topo]=valor;
 }
 
 int desempilha (pilhavet *p){
@@ -22,8 +22,7 @@ int desempilha (pilhavet *p){
         printf("\nPilha vazia");
         exit(1);
     }
-    aux =
-    p->vet[p->topo];
+    aux = p->vet[p->topo];
     p->topo--;
     return aux;
 }
@@ -38,7 +37,7 @@ int main(void){
         empilha(valor,&pilha);
     }
     for (int i=0; i<TAM; i++){
-        printf("\n%", desempilha(&pilha));
+        printf("\n%d", desempilha(&pilha));
     }
     printf("\n");
     system("pause");
